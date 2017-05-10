@@ -28,11 +28,6 @@ var app = angular
         controller: 'MainCtrl',
         controllerAs: 'main'
       })
-      .when('/NomsCouleur', {
-        templateUrl: 'views/Accueil/NomsCouleur.html',
-        controller: 'NomsCouleurCtrl',
-        controllerAs: 'NomsCouleur'
-      })
       .otherwise({
         redirectTo: '/'
       });

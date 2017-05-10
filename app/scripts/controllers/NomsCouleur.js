@@ -3,5 +3,6 @@
 angular.module('forumApp')
   .controller('NomsCouleurCtrl', function ($scope) {
     $scope.fromWhere = false;
-    $scope.myClass = 'test';
+    $scope.myClass = 'caseOpen';
+
   });

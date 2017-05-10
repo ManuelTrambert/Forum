@@ -15,6 +15,9 @@ angular.module('forumApp')
       'Karma'
     ];
 
+    $scope.myContenu = 'item_contenu';
+    $scope.myTitle = 'titre_article';
+    $scope.myItemDeco = 'item_deco';
     $scope.template = [
       {name: 'noms', url: 'views/Accueil/NomsCouleur.html'},
       {name: 'anatomie', url: '/views/Accueil/Anatomie.html'},
@@ -34,18 +37,18 @@ angular.module('forumApp')
         clickOutsideToClose: true,
         targetEvent: ev,
         fullscreen: true
-      })
-        .then(function (response) {
-          $location.path('/NomsCouleur')
-        }, function (test) {
-          console.log(test);
-        });
+      });
     };
 
     function DialogController ($scope, $mdDialog) {
       $scope.fromWhere = true;
+      $scope.myClass = 'caseOpen';
+      $scope.myContenu = 'item_contenu_block';
+      $scope.myTitle = 'titre_article_popup';
+      $scope.myItemDeco = 'item_deco_popup';
+
       $scope.answer = function () {
-        $mdDialog.hide('prout');
+        $mdDialog.hide();
       };
     }
   });
